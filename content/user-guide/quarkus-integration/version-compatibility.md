@@ -11,9 +11,9 @@ menu:
 
 ---
 
-Each version of the Camunda Quarkus Extension is bound to a specific version of Camunda Platform and Quarkus. 
-Only these default combinations are recommended (and supported) by Camunda.
-Other combinations must be thoroughly tested before being used in production.
+Each version of the Camunda Engine Quarkus Extension is bound to a specific version of Camunda Platform and Quarkus. 
+Only these default combinations are recommended (and supported) by Camunda. Other combinations must be thoroughly 
+tested before being used in production.
 
 <table class="table table-striped">
   <tr>
@@ -32,15 +32,15 @@ the version in case it has a bug. Describe that camunda only supports what is de
 ```
 <dependencyManagement>
   <dependencies>
-  ...
+    ...
     <dependency>
-      <groupId>org.springframework.boot</groupId>
-      <artifactId>spring-boot-dependencies</artifactId>
-      <version>2.x.y.RELEASE</version> <!-- set correct version here -->
+      <groupId>io.quarkus.platform</groupId>
+      <artifactId>quarkus-bom</artifactId>
+      <version>${quarkus.framework.version}</version><!-- set correct version here -->
       <type>pom</type>
       <scope>import</scope>
     </dependency>
-  ...
+    ...
   </dependencies>
 </dependencyManagement>
 ```
